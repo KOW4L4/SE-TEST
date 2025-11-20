@@ -33,7 +33,8 @@ The repository follows a standard `src` layout:
   - `test_model.py` – unit tests for core model behaviour.
   - `COVERAGE.md` – coverage report and notes.
 - `docs/`
-  - Design, requirements, and this manual.
+  - `ImplementationPlan.md` – lists components, steps, and technical choices that guide the coding work.
+  - `RequirementsCoverage.md` – shows, for each SRS requirement, where it is implemented in the code and how it is tested.
 
 Guideline: keep **rules and state** in `src/model`, and keep **I/O and presentation** in `src/cli`.
 
@@ -41,8 +42,8 @@ Guideline: keep **rules and state** in `src/model`, and keep **I/O and presentat
 
 1. **Clone** or download the repository on Windows:
    ```powershell
-   git clone https://github.com/KOW4L4/SE-TEST.git
-   cd SE-TEST
+   git clone https://github.com/PolyU-Computer-Science/Year3-COMP3211-SE-Group-Project.git
+   cd Year3-COMP3211-SE-Group-Project
    ```
 2. **Create and activate** a Python 3.12 virtual environment (example using `venv`):
    ```powershell
@@ -181,7 +182,7 @@ When adding new features, follow these guidelines:
 2. Modify or add tests in `tests/` to describe the desired behaviour.
 3. Implement changes in `src/model` and/or `src/cli` following the separation‑of‑concerns guidelines.
 4. Run `python -m unittest discover -s tests` and, if available, coverage.
-5. Update relevant documentation (`docs/DesignDocument,` `docs/RequirementsCoverage `and the manuals) if behaviour or commands changed.
+5. Update relevant documentation in `docs/` (such as the design document, SRS, requirements coverage, or manuals) if behaviour or commands change. If some of these files are later removed, ensure any new documentation you add clearly reflects the current code.
 6. Submit the branch for review or integration.
 
 This completes the developer‑oriented overview needed to build, run, debug, and extend the Jungle CLI on Windows with Python 3.12.
